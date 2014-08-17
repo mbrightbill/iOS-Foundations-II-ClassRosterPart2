@@ -19,4 +19,8 @@ class Person {
         self.firstName = fName
         self.lastName = lName
     }
+    
+    func fullName() -> String {
+        return "\(firstName) \(lastName)"
+    }
 }

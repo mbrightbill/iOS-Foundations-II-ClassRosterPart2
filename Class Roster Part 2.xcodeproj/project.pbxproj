@@ -13,6 +13,7 @@
 		D5A69DF119A1257800E26A88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A69DF019A1257800E26A88 /* Images.xcassets */; };
 		D5A69DFD19A1257800E26A88 /* Class_Roster_Part_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A69DFC19A1257800E26A88 /* Class_Roster_Part_2Tests.swift */; };
 		D5A69E0719A1266800E26A88 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A69E0619A1266800E26A88 /* Person.swift */; };
+		D5A69E0919A1329500E26A88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A69E0819A1329500E26A88 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		D5A69DFB19A1257800E26A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5A69DFC19A1257800E26A88 /* Class_Roster_Part_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class_Roster_Part_2Tests.swift; sourceTree = "<group>"; };
 		D5A69E0619A1266800E26A88 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D5A69E0819A1329500E26A88 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				D5A69DEB19A1257800E26A88 /* ViewController.swift */,
 				D5A69E0619A1266800E26A88 /* Person.swift */,
 				D5A69DED19A1257800E26A88 /* Main.storyboard */,
+				D5A69E0819A1329500E26A88 /* DetailViewController.swift */,
 				D5A69DF019A1257800E26A88 /* Images.xcassets */,
 				D5A69DE719A1257800E26A88 /* Supporting Files */,
 			);
@@ -214,6 +217,7 @@
 				D5A69E0719A1266800E26A88 /* Person.swift in Sources */,
 				D5A69DEC19A1257800E26A88 /* ViewController.swift in Sources */,
 				D5A69DEA19A1257800E26A88 /* AppDelegate.swift in Sources */,
+				D5A69E0919A1329500E26A88 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +405,7 @@
 				D5A69E0219A1257800E26A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5A69E0319A1257800E26A88 /* Build configuration list for PBXNativeTarget "Class Roster Part 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +414,7 @@
 				D5A69E0519A1257800E26A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
