@@ -10,10 +10,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    //Step 7. in IB, add new VC and segue from mainVC cell to new VC. Add this class file and link. Add label and create outlet.
+    
     @IBOutlet weak var label: UILabel!
 
-    //Step 8. create selectedPerson default value and set firstName to label text.
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.label.text = self.selectedPerson.fullName()
@@ -30,7 +30,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // Step 8
+    
     var selectedPerson = Person(fName: "John", lName: "Doe")
 
     /*

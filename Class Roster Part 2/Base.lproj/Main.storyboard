@@ -19,6 +19,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="B9N-ml-s4z">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="RLQ-VR-Zhx"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kmQ-uf-aGD">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -31,9 +34,38 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RLQ-VR-Zhx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="RLQ-VR-Zhx"/>
+                                    </mask>
+                                </variation>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B9N-ml-s4z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T4J-r7-KCo"/>
+                            <constraint firstItem="B9N-ml-s4z" firstAttribute="leading" secondItem="y3c-jy-aDJ" secondAttribute="leading" id="j6N-5K-EBH"/>
+                            <constraint firstItem="B9N-ml-s4z" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="t4e-0a-K0D"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="T4J-r7-KCo"/>
+                                <exclude reference="j6N-5K-EBH"/>
+                                <exclude reference="t4e-0a-K0D"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="T4J-r7-KCo"/>
+                                <include reference="j6N-5K-EBH"/>
+                                <include reference="t4e-0a-K0D"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="zHS-hc-8Bk"/>
                     <connections>
@@ -53,6 +85,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HTU-kz-FCq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ccs-30-WKe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOx-sh-syw">
