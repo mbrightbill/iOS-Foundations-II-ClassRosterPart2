@@ -15,6 +15,7 @@
 		D5A69E0719A1266800E26A88 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A69E0619A1266800E26A88 /* Person.swift */; };
 		D5A69E0919A1329500E26A88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A69E0819A1329500E26A88 /* DetailViewController.swift */; };
 		D5A69E1619A1701400E26A88 /* Names.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A69E1519A1701400E26A88 /* Names.plist */; };
+		D5D6652819A43D900029701B /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D6652719A43D900029701B /* placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D5A69E0619A1266800E26A88 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D5A69E0819A1329500E26A88 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D5A69E1519A1701400E26A88 /* Names.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Names.plist; sourceTree = "<group>"; };
+		D5D6652719A43D900029701B /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = ../../placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				D5A69DE919A1257800E26A88 /* AppDelegate.swift */,
 				D5A69DEB19A1257800E26A88 /* ViewController.swift */,
+				D5D6652719A43D900029701B /* placeholder.png */,
 				D5A69E0619A1266800E26A88 /* Person.swift */,
 				D5A69DED19A1257800E26A88 /* Main.storyboard */,
 				D5A69E1519A1701400E26A88 /* Names.plist */,
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5A69E1619A1701400E26A88 /* Names.plist in Resources */,
+				D5D6652819A43D900029701B /* placeholder.png in Resources */,
 				D5A69DEF19A1257800E26A88 /* Main.storyboard in Resources */,
 				D5A69DF119A1257800E26A88 /* Images.xcassets in Resources */,
 			);

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class ViewController: UIViewController, UITableViewDataSource {
     
     
@@ -50,6 +49,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var showsVerticalScrollIndicator: Bool = true
         
         self.tableView.dataSource = self
         
