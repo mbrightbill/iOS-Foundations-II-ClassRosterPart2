@@ -14,10 +14,14 @@ class Person {
     var firstName: String
     var lastName: String
     var image: UIImage?
+    var idNumber: String
+    var role: String
     
-    init(fName: String, lName: String) {
+    init(fName: String, lName: String, idNumber: String, role: String) {
         self.firstName = fName
         self.lastName = lName
+        self.idNumber = idNumber
+        self.role = role
     }
     
     func fullName() -> String {

@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var selectedPerson = Person(fName: "John", lName: "Doe")
+    var selectedPerson = Person(fName: "John", lName: "Doe", idNumber: "Anything", role: "student")
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -24,13 +24,20 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         
         self.firstNameTextField.delegate = self
         self.lastNameTextField.delegate = self
-        
         var placeholderImage = UIImage(named: "placeholder")
         
-        self.imageView.image = placeholderImage
+        if self.selectedPerson.image != nil {
+            self.imageView.image = self.selectedPerson.image
+        } else {
+            self.imageView.image = placeholderImage
+        }
+        
+        
         
         imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = 60.0
+        imageView.layer.cornerRadius = 100.0
+        imageView.layer.borderWidth = 1.0
+        
         
         // Do any additional setup after loading the view.
     }
@@ -79,7 +86,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         picker.dismissViewControllerAnimated(true, completion: nil)
         println("user picked an image")
         var editedImage = info[UIImagePickerControllerOriginalImage] as UIImage
-        self.imageView.image = editedImage
+        self.imageView?.image = editedImage
+        self.selectedPerson.image = editedImage
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
