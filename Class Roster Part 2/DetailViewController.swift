@@ -33,10 +33,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         }
         
         
-        
         imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = 100.0
-        imageView.layer.borderWidth = 1.0
+        imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.layer.borderWidth = 0.5
         
         
         // Do any additional setup after loading the view.
@@ -47,6 +46,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.label.text = self.selectedPerson.fullName()
+        self.firstNameTextField.text = self.selectedPerson.firstName
+        self.lastNameTextField.text = self.selectedPerson.lastName
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,15 +57,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     //MARK: UITextFieldDelegate
     
+    func textFieldDidEndEditing(textField: UITextField!) {
+        self.selectedPerson.firstName = self.firstNameTextField.text
+        self.selectedPerson.lastName = self.lastNameTextField.text
+    }
+    
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
-    func textFieldDidEndEditing(textField: UITextField!) {
-        println(textField.text)
-    }
-    
     
     @IBAction func photoButtonPressed(sender: AnyObject) {
     
@@ -73,12 +74,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         imagePickerController.delegate = self
         imagePickerController.allowsEditing = true
         
-        imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
         
         
         self.presentViewController(imagePickerController, animated: true, completion: nil)
+        
+        println("Did press button")
     }
-    
+
     
     //MARK: UIImagePickerControllerDelegate
     

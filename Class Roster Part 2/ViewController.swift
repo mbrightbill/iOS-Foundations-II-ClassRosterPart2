@@ -13,23 +13,34 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     var classRoster = [[Person](), [Person]()] as Array
     
     let namesPath = NSBundle.mainBundle().pathForResource("names", ofType: "plist")
-
-    var sectionArr = ["Students", "Teachers"]
+    
+    let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var showsVerticalScrollIndicator: Bool = true
-        
+        let nameArr = NSArray(contentsOfFile: self.namesPath)
         self.tableView.dataSource = self
         
-        let nameArr = NSArray(contentsOfFile: self.namesPath)
+        if let people = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath + "/archive") as? [[Person]] {
+            classRoster = people as [[Person]]
+        } else {
+            self.makeList(nameArr)
+        }
         
-        self.makeList(nameArr)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        
+        NSKeyedArchiver.archiveRootObject(classRoster, toFile: documentsPath + "/archive")
+        
+        self.tableView.reloadData()
     }
     
     func makeList(rosterArr: NSArray) {
