@@ -36,7 +36,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
         NSKeyedArchiver.archiveRootObject(classRoster, toFile: documentsPath + "/archive")
         
